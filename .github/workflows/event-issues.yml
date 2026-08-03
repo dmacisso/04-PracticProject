@@ -1,0 +1,9 @@
+name: EventIssue
+on: [push, issues]
+jobs:
+  gather_metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get issue metadata
+        run: | 
+          echo "Issue Title: ${{ github.event.issue.title }}"
